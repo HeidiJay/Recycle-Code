@@ -31,6 +31,9 @@ GROUP BY country
 ORDER BY wins DESC
 LIMIT 3;
 
+-- Distinct only returns the value of a given character one time
+-- Example:  If cat, cat, dog, cat. Than distinct would return cat, dog.
+
 -- Display person id, by sport, in descending order.
 
 SELECT
