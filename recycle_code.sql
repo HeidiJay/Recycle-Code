@@ -4,6 +4,24 @@
 SELECT first_name, last_name
 FROM person;
 
+-- Displying three columns from a given table
+
+SELECT
+    mkt_carrier, mkt_carrier_fl_num, origin
+FROM performance;
+-- Or can be also written as...
+SELECT
+    mkt_carrier,
+    mkt_carrier_fl_num,
+    origin
+FROM performance;
+-- Can be cleaned up even further with...
+SELECT
+    mkt_carrier AS airline,
+    mkt_carrier_fl_num AS flight,
+    origin AS depart_city
+FROM performance;
+
 -- Display the number of wins, by country, in descending order, with a limited # of rows, from a table.
 SELECT 
     country,
