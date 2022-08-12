@@ -34,6 +34,10 @@ LIMIT 3;
 -- Distinct only returns the value of a given character one time
 -- Example:  If cat, cat, dog, cat. Than distinct would return cat, dog.
 
+SELECT DISTINCT mkt_carrier,
+    origin AS depart_city
+FROM performance;
+
 -- Display person id, by sport, in descending order.
 
 SELECT
