@@ -35,7 +35,8 @@ SELECT
     state,
     population
 FROM city_population
-WHERE city = "Virginia Beach";
+WHERE city = "Virginia Beach"
+AND state = "Virginia";
 
 -- Display the number of wins, by country, in descending order, with a limited # of rows, from a table.
 SELECT 
