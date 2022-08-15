@@ -28,6 +28,15 @@ SELECT first_name, last_name
 FROM person
 WHERE first_name = "John";
 
+-- Another example WHERE cause.
+
+SELECT
+    city,
+    state,
+    population
+FROM city_population
+WHERE city = "Virginia Beach";
+
 -- Display the number of wins, by country, in descending order, with a limited # of rows, from a table.
 SELECT 
     country,
