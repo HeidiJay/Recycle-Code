@@ -22,6 +22,12 @@ SELECT
     origin AS depart_city
 FROM performance;
 
+-- The WHERE clause. Criteria to filter matching rows.
+
+SELECT first_name, last_name
+FROM person
+WHERE first_name = "John";
+
 -- Display the number of wins, by country, in descending order, with a limited # of rows, from a table.
 SELECT 
     country,
