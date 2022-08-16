@@ -142,6 +142,17 @@ SELECT
 FROM customers c
 LEFT JOIN orders o -- This returns the first (left) table and if information matches on the right table to the left table.
     ON c.customer_id = o.customer_id;
+    
+-- FULL OUTER JOIN returns all rows from two or more tables, regardless of whether a join condition is met.
+
+SELECT 
+    c.first_name
+    c.last_name
+    o.order_date
+    o.order_amount
+FROM customers c
+FULL OUTER JOIN orders o
+    ON c.customer_id = o.customer_id;
 
 -- Join: Group age of oldest athlete by region.
 
