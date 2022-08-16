@@ -239,3 +239,12 @@ SELECT
 FROM person
 WHERE age BETWEEN 20 and 50
 WHERE first_name IN ("John, Lorene, Mike");
+
+-- Or we can use 'NOT IN' to return values not in the list given.
+
+SELECT 
+    first_name,
+    age
+FROM person
+WHERE age BETWEEN 20 and 50
+WHERE first_name NOT IN 'John';
