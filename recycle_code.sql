@@ -132,6 +132,17 @@ JOIN country_stats AS c2
 ON c1.id = c2.country_id
 GROUP BY region;
 
+-- Left Join or Right Join: Joins tables, but one table dominates. 
+
+SELECT 
+    c.first_name
+    c.last_name
+    o.order_date
+    o.order_amount
+FROM customers c
+LEFT OUTER JOIN orders o -- This returns the first (left) table and if information matches on the right table to the left table.
+    ON c.customer_id = o.customer_id;
+
 -- Join: Group age of oldest athlete by region.
 
 SELECT
