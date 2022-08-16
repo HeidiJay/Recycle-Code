@@ -38,7 +38,19 @@ FROM city_population
 WHERE city = "Virginia Beach"
 AND state = "Virginia";
 
+-- LIKE clause is similar to =.  The Wildcard %_ clause with LIKE, % represents zero or more characters, while _ represents exactly one character.
+-- The wildcards can represent characters before a part of a word, after, in the middle, or both before and after a word.
+
+SELECT
+    city,
+    state,
+    population
+FROM city_population
+WHERE city LIKE "%Beach"  -- Like Virginia Beach
+AND state LIKE "Virgini_";  -- Can look for the character 'a' for Virginia.
+
 -- Display the number of wins, by country, in descending order, with a limited # of rows, from a table.
+
 SELECT 
     country,
     SUM(wins) AS wins
