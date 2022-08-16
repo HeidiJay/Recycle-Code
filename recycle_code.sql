@@ -67,6 +67,14 @@ FROM city_population
 WHERE city_name LIKE '__, %'  -- Three underscores and a % represents a two word city who first word only has three letters, like 'New York'.
 AND state LIKE 'V%';  
 
+-- ORDER BY ASC or DESC 
+
+SELECT
+    name
+    state
+FROM residency
+ORDER BY state DESC, name ASC;
+
 -- Display the number of wins, by country, in descending order, with a limited # of rows, from a table.
 
 SELECT 
