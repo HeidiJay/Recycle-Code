@@ -248,3 +248,15 @@ SELECT
 FROM person
 WHERE age BETWEEN 20 and 50
 WHERE first_name NOT IN 'John';
+
+-- Operator Precedence are the order of what operator comes first.
+-- AND is a high operator precedence than OR, so AND would be the first condition to apple before the next.
+
+SELECT 
+    first_name,
+    age,
+    hometown
+FROM person
+WHERE first_name = "John"
+OR first_name = "Mike"
+AND hometown = "Visalia"; -- AND would be the first condition to apply
