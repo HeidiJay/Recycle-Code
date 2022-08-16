@@ -258,5 +258,5 @@ SELECT
     hometown
 FROM person
 WHERE first_name = "John"
-OR first_name = "Mike"
-AND hometown = "Visalia"; -- AND would be the first condition to apply
+OR first_name = "Mike"  -- Mike may come back from a different hometown, because it is the last operator for the query to search.
+AND hometown = "Visalia"; -- AND would be the first condition to apply.
