@@ -217,3 +217,24 @@ WHERE cancellation_code IS NOT NULL
 SELECT first_name, last_name
 FROM person
 WHERE last_name IS NULL;
+
+-- Here we can use an AND clause and an OR cause
+
+SELECT 
+    first_name,
+    age
+FROM person
+WHERE age >= 20
+AND age <= 50
+WHERE first_name = 'John'
+OR first_name = 'Lorene'
+OR first_name = 'Mike';
+
+-- We can clean up the above example by replacing our '>=' and '<=' with a BETWEEN cause and replacing our 'OR' with an IN cause.
+
+SELECT 
+    first_name,
+    age
+FROM person
+WHERE age BETWEEN 20 and 50
+WHERE first_name IN ("John, Lorene, Mike");
