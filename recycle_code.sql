@@ -49,6 +49,16 @@ FROM city_population
 WHERE city LIKE '%Beach'  -- Like Virginia Beach
 AND state LIKE 'Virgini_';  -- Can look for the character 'a' for Virginia.
 
+-- More examples of how to use a wildcare.
+
+SELECT
+    city,
+    state,
+    population
+FROM city_population
+WHERE city_name LIKE '___, Beach'  -- Four underscores represent only four characters, Like 'Fort Beach'.
+AND state LIKE 'V%';  -- A wildcard after the letter, can represent any state that starts with a 'V'.
+
 -- Display the number of wins, by country, in descending order, with a limited # of rows, from a table.
 
 SELECT 
