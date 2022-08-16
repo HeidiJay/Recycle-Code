@@ -80,7 +80,18 @@ ORDER BY state DESC, name ASC;
 SELECT mkt_carrier
     AVG(delay_time) -- This query would tell us the average delay time between each market carrier/airline
 FROM performance
-GROUP BY mkt_carrier
+GROUP BY mkt_carrier;
+
+-- Aggregate functions
+
+SELECT p.mkt_carrier,
+    c.carrier_desc, -- This would give us the market carrier/airline name
+    AVG(p.delay_time) -- This query would tell us the average delay time between each market carrier/airline
+FROM performance p
+INNER JOIN codes_carrier c
+    ON p.mkt_carrier = c.carrier_code
+GROUP BY p.mkt_carrier,
+    c.carrier_desc;
 
 -- Display the number of wins, by country, in descending order, with a limited # of rows, from a table.
 
