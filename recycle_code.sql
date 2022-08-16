@@ -46,8 +46,8 @@ SELECT
     state,
     population
 FROM city_population
-WHERE city LIKE "%Beach"  -- Like Virginia Beach
-AND state LIKE "Virgini_";  -- Can look for the character 'a' for Virginia.
+WHERE city LIKE '%Beach'  -- Like Virginia Beach
+AND state LIKE 'Virgini_';  -- Can look for the character 'a' for Virginia.
 
 -- Display the number of wins, by country, in descending order, with a limited # of rows, from a table.
 
