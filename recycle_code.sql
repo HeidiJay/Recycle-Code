@@ -260,3 +260,14 @@ FROM person
 WHERE first_name = "John"
 OR first_name = "Mike"  -- Mike may come back from a different hometown, because it is the last operator for the query to search.
 AND hometown = "Visalia"; -- AND would be the first condition to apply.
+
+-- We can fix the above query to only return those names from our given hometown by added '()' which has a higher operator precedence value than AND.
+
+SELECT 
+    first_name,
+    age,
+    hometown
+FROM person
+WHERE (first_name = "John"
+OR first_name = "Mike") -- Now the everything inside the '()' will run first, before the hometown condition is applied. 
+AND hometown = "Visalia"; 
