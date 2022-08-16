@@ -332,3 +332,18 @@ FROM person
 WHERE (first_name = "John"
 OR first_name = "Mike") -- Now the everything inside the '()' will run first, before the hometown condition is applied. 
 AND hometown = "Visalia"; 
+
+-- This query will display airlines with the average delay time longer than 30 minutes for Fresno.
+
+SELECT p.mkt_carrier,
+    c.carrier_desc, -- This would give us the market carrier/airline name
+    AVG(p.delay_time) AS average_delay -- This query would tell us the average delay time between each market carrier/airline
+FROM performance p
+INNER JOIN codes_carrier c
+    ON p.mkt_carrier = c.carrier_code
+    WHERE p.orgin = 'FRN' -- This is where the flight originated out of Fresno
+    AND p.delay_time <> 0 -- This takes the flights that where ontime out of the equation
+GROUP BY p.mkt_carrier,
+    c.carrier_desc
+HAVING AVG(p.delay_time) > 30  -- HAVING aggergate replaces the WHERE clause.  Here we want delay time greater than 30 minutes.
+ORDER BY AVG(p.delay_time) DESC; -- This would show the longest delay time first.
