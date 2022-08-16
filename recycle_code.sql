@@ -115,7 +115,7 @@ INNER JOIN orders
     ON customers.customer_id = orders.customer_id
  WHERE customers.last_name = "J%";
 
--- Another join example
+-- Join example with Alias to represent a table name
 
 SELECT *
 FROM countries AS c1
