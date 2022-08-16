@@ -105,6 +105,18 @@ GROUP BY sport;
 
 -- Join Tables
 
+SELECT 
+    customers.first_name
+    customers.last_name
+    orders.order_date
+    orders.order_amount
+FROM customers
+INNER JOIN orders
+    ON customers.customer_id = orders.customer_id
+ WHERE customers.last_name = "J%";
+
+-- Another join example
+
 SELECT *
 FROM countries AS c1
 JOIN countries AS c2
