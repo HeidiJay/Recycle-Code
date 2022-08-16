@@ -9,12 +9,14 @@ FROM person;
 SELECT
     mkt_carrier, mkt_carrier_fl_num, origin
 FROM performance;
+
 -- Or can be also written as...
 SELECT
     mkt_carrier,
     mkt_carrier_fl_num,
     origin
 FROM performance;
+
 -- Can be cleaned up even further with...
 SELECT
     mkt_carrier AS airline,
@@ -345,5 +347,5 @@ INNER JOIN codes_carrier c
     AND p.delay_time <> 0 -- This takes the flights that where ontime out of the equation
 GROUP BY p.mkt_carrier,
     c.carrier_desc
-HAVING AVG(p.delay_time) > 30  -- HAVING aggergate replaces the WHERE clause.  Here we want delay time greater than 30 minutes.
+HAVING AVG(p.delay_time) > 30  -- HAVING aggregation replaces the WHERE clause in aggregate functions.  Here we want the delay times that are greater than 30 minutes.
 ORDER BY AVG(p.delay_time) DESC; -- This would show the longest delay time first.
