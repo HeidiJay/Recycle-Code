@@ -201,3 +201,19 @@ SELECT
     COUNT(*) AS rows
 FROM summer_games
 GROUP BY bronze;
+
+-- Null:  IS NULL or IS NOT NULL clause
+
+SELECT
+    mkt_carrier AS airline,
+    mkt_carrier_fl_num AS flight,
+    origin AS depart_city
+    cancellation_code
+FROM performance;
+WHERE cancellation_code IS NOT NULL
+
+-- Another Null example
+
+SELECT first_name, last_name
+FROM person
+WHERE last_name IS NULL;
