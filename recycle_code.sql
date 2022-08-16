@@ -91,7 +91,8 @@ FROM performance p
 INNER JOIN codes_carrier c
     ON p.mkt_carrier = c.carrier_code
 GROUP BY p.mkt_carrier,
-    c.carrier_desc;
+    c.carrier_desc
+ORDER BY AVG(p.delay_time) DESC; -- This would show the longest delay time first.
 
 -- Display the number of wins, by country, in descending order, with a limited # of rows, from a table.
 
