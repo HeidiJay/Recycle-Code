@@ -75,6 +75,13 @@ SELECT
 FROM residency
 ORDER BY state DESC, name ASC;
 
+-- Aggregate functions like; COUNT, SUM, MAX, MIN, AVG.
+
+SELECT mkt_carrier
+    AVG(delay_time) -- This query would tell us the average delay time between each market carrier/airline
+FROM performance
+GROUP BY mkt_carrier
+
 -- Display the number of wins, by country, in descending order, with a limited # of rows, from a table.
 
 SELECT 
