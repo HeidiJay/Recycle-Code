@@ -230,6 +230,7 @@ WHERE first_name = 'John'
 OR first_name = 'Lorene'
 OR first_name = 'Mike';
 
+-- IN checks for equal conditions
 -- We can clean up the above example by replacing our '>=' and '<=' with a BETWEEN cause and replacing our 'OR' with an IN cause.
 
 SELECT 
