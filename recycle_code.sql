@@ -10,14 +10,14 @@ SELECT
     mkt_carrier, mkt_carrier_fl_num, origin
 FROM performance;
 
--- Or can be also written as...
+-- Or can be also written as.
 SELECT
     mkt_carrier,
     mkt_carrier_fl_num,
     origin
 FROM performance;
 
--- Can be cleaned up even further with...
+-- Can be cleaned up even further with.
 SELECT
     mkt_carrier AS airline,
     mkt_carrier_fl_num AS flight,
