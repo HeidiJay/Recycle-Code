@@ -188,11 +188,11 @@ FULL OUTER JOIN orders o
 SELECT
     region
     MAX(age) AS age_of_oldest_athlete
-FROM athletes AS a1
-JOIN summer_games AS s2
-ON a1 = s2.athlete_id
-JOIN countries AS c3
-ON c3.region = region
+FROM athletes AS a
+JOIN summer_games AS s
+ON a.id = s.athlete_id
+JOIN countries AS c
+ON c.id = s.athlete_id
 GROUP BY region;
 
 -- Union: Unique # of events held by each sport, from both tables
