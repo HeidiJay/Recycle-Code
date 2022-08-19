@@ -251,11 +251,11 @@ FROM orders;
 -- Query that captures the missing data from the query
 SELECT SUM(rev) AS revenue
 FROM
-    (SELECT country, SUM(rev) AS rev)
-FROM order AS o
-JOIN countries AS c
-ON o.country_id = c.id
-GROUP BY country;
+    (SELECT country, SUM(rev) AS rev
+    FROM order AS o
+    JOIN countries AS c
+    ON o.country_id = c.id
+    GROUP BY country);
 
 -- Count all of a given column by rows
 
