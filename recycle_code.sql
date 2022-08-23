@@ -195,6 +195,21 @@ JOIN countries AS c
 ON c.id = s.athlete_id
 GROUP BY region;
 
+/* Join: Most Decorated Summer Athletes. */
+
+-- Pull athlete_name and gold_metals for summer_games
+SELECT
+    a.names AS athlete_name
+    SUM(s.gold) AS gold_metals
+FROM summer_games AS s
+JOIN athletes AS a
+ON s.athlete_id = a.id
+GROUP BY a.name
+-- Filter for only athletes with 3 gold metals or more
+HAVING COUNT(s.gold) >= 3
+-- Sort to show the most gold metals at the top
+ORDER BY (gold_metals) DESC;
+
 /* Union: Unique # of events held by each sport, from both tables */
 -- Select sport and event for summer sports
 SELECT
