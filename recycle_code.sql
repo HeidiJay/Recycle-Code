@@ -40,8 +40,8 @@ FROM city_population
 WHERE city = "Virginia Beach"
 AND state = "Virginia";
 
--- LIKE clause is similar to =.  The Wildcard %_ clause with LIKE, % represents zero or more characters, while _ represents exactly one character.
--- The wildcards can represent characters before a part of a word, after, in the middle, or both before and after a word.
+/* LIKE clause is similar to =.  The Wildcard %_ clause with LIKE, % represents zero or more characters, while _ represents exactly one character.
+The wildcards can represent characters before a part of a word, after, in the middle, or both before and after a word. */
 
 SELECT
     city,
@@ -106,8 +106,8 @@ GROUP BY country
 ORDER BY wins DESC
 LIMIT 3;
 
--- Distinct only returns the value of a given character one time
--- Example:  If cat, cat, dog, cat. Than distinct would return cat, dog.
+/* Distinct only returns the value of a given character one time
+Example:  If cat, cat, dog, cat. Than distinct would return cat, dog. */
 
 SELECT DISTINCT mkt_carrier,
     origin AS depart_city
@@ -195,8 +195,7 @@ JOIN countries AS c
 ON c.id = s.athlete_id
 GROUP BY region;
 
--- Union: Unique # of events held by each sport, from both tables
-
+/* Union: Unique # of events held by each sport, from both tables */
 -- Select sport and event for summer sports
 SELECT
     sport,
@@ -293,8 +292,8 @@ WHERE first_name = 'John'
 OR first_name = 'Lorene'
 OR first_name = 'Mike';
 
--- IN checks for equal conditions
--- We can clean up the above example by replacing our '>=' and '<=' with a BETWEEN cause and replacing our 'OR' with an IN cause.
+/* IN checks for equal conditions
+We can clean up the above example by replacing our '>=' and '<=' with a BETWEEN cause and replacing our 'OR' with an IN cause. */
 
 SELECT 
     first_name,
@@ -312,8 +311,8 @@ FROM person
 WHERE age BETWEEN 20 and 50
 WHERE first_name NOT IN 'John';
 
--- Operator Precedence are the order of what operator comes first.
--- AND is a high operator precedence than OR, so AND would be the first condition to apple before the next.
+/* Operator Precedence are the order of what operator comes first.
+AND is a high operator precedence than OR, so AND would be the first condition to apple before the next. */
 
 SELECT 
     first_name,
