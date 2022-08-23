@@ -1,4 +1,4 @@
--- This collection of sample SQL queries is intented for referrence and recycle code.
+/* This collection of sample SQL queries is intented for referrence and recycle code. */
 
 -- Display all first and last name from a table.
 SELECT first_name, last_name
