@@ -363,3 +363,21 @@ GROUP BY p.mkt_carrier,
     c.carrier_desc
 HAVING AVG(p.delay_time) > 30  -- HAVING aggregation replaces the WHERE clause in aggregate functions.  Here we want the delay times that are greater than 30 minutes.
 ORDER BY AVG(p.delay_time) DESC; -- This would show the longest delay time first.
+
+/* My own queries I am practicing on a database. */
+
+-- Show Customers, Company, Order ID as receipt, and the name of the product they bought, by ascending order.
+
+SELECT
+	c.CompanyName AS company,
+	c.ContactName AS customer,
+	o.OrderID AS receipt,
+	p.ProductName AS product
+FROM dbo.Customers AS c
+JOIN dbo.Orders AS o
+ON c.CustomerID = o.CustomerID
+JOIN dbo.[Order Details] AS od
+ON o.OrderID = od.OrderID
+JOIN dbo.Products AS p
+ON od.ProductID = p.ProductID
+ORDER BY p.ProductName ASC;
