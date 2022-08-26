@@ -382,3 +382,22 @@ JOIN dbo.Products AS p
 ON od.ProductID = p.ProductID
 WHERE p.ProductName = 'Chai'
 ORDER BY p.ProductName ASC;
+
+-- Another example
+
+SELECT
+	c.CompanyName AS company,
+	c.ContactName AS customer,
+	o.OrderID AS receipt,
+	p.ProductName AS product,
+	od.UnitPrice AS [unit price],
+	od.Quantity AS quantity,
+	o.OrderDate AS [order date]
+FROM dbo.Customers AS c
+JOIN dbo.Orders AS o
+ON c.CustomerID = o.CustomerID
+JOIN dbo.[Order Details] AS od
+ON o.OrderID = od.OrderID
+JOIN dbo.Products AS p
+ON od.ProductID = p.ProductID
+ORDER BY od.Quantity DESC;
