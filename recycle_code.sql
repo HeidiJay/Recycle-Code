@@ -380,4 +380,5 @@ JOIN dbo.[Order Details] AS od
 ON o.OrderID = od.OrderID
 JOIN dbo.Products AS p
 ON od.ProductID = p.ProductID
+WHERE p.ProductName = 'Chai'
 ORDER BY p.ProductName ASC;
