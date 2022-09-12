@@ -5,3 +5,10 @@ git checkout qa
 git pull upstream qa
 /* Make code changes. Create pull request - Merge pull request*/
 git push origin qa
+
+/* After you make changes and want to commit those changes. */
+git status -- Shows your file changes
+git /* file name -or- . */ -- grabs the file you want to commit -or- '.' period means 'everything new in any file'.
+git add /* file name */
+git commit -m "shortly describe what your commiting"
+git push origin qa -- merges pull request
