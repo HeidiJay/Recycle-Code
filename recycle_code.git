@@ -1,2 +1,7 @@
 /* This collection of sample git commands is intented for referrence and recycle code. */
 
+git checkout qa
+/* Update the qa branch */
+git pull upstream qa
+/* Make code changes. Create pull request - Merge pull request*/
+git push origin qa
