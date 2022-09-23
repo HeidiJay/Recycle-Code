@@ -4,7 +4,7 @@
 SELECT first_name, last_name
 FROM person;
 
--- Displying three columns from a given table
+-- Displying three columns from a given table.
 
 SELECT
     mkt_carrier, mkt_carrier_fl_num, origin
