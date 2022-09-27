@@ -1,4 +1,4 @@
-/* This collection of sample git commands is intented for referrence and recycle code. */
+/* This collection of example git commands is intented for referrence and recycle code. */
 
 git checkout qa
 /* Update the qa branch */
