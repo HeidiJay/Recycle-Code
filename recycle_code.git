@@ -12,3 +12,9 @@ git /* file name -or- . */ -- grabs the file you want to commit -or- '.' period 
 git add /* file name */
 git commit -m "shortly describe what your commiting"
 git push origin qa -- merges pull request
+
+/* Push WordPress files from the local environment to GitHub */
+
+git init
+git commit -m "first commit"
+git remote add origin https://github.com/YourGitHubName/YourRepoName.git
