@@ -14,9 +14,10 @@ git commit -m "shortly describe what your commiting"
 git push origin qa -- merges pull request
 
 /* Push WordPress files from the local environment to GitHub */
+/* Make sure to update your default branches: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/changing-the-default-branch */
 
 git init
 git commit -m "first commit"
 git remote add origin https://github.com/YourGitHubName/YourRepoName.git
 git push -u origin master
-/* Make sure to update your default branches: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/changing-the-default-branch */
+
