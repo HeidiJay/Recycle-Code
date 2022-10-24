@@ -13,3 +13,16 @@
             "BoolIfExists": {
                 "aws:MultiFactorAuthPresent": "true"
                                            }}}]}
+
+/* Not: Can do everything except what is specified */
+
+{   "Version": "2022-10-24",
+   "Statement": [
+     {  "Sid": "VisualEditor0",
+        "Effect": "Allow",
+        "NotAction": "ec2:TerminateInstances",
+        "NotResource": "arn:aws:ec2:::instance/i-0598c7d356eba48d7",
+        "Condition": {
+                     "BoolIfExists": {
+                     "aws:MultiFactorAuthPresent": "true"
+                                           }}}]}
