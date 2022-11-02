@@ -408,7 +408,7 @@ SELECT
 P.Firstname,
 P.Lastname,
 P.CentralAccount,
-SUBSTRING(P.CCC_Position, 3 4) AS 'Dept'
+SUBSTRING(P.CCC_Position, 3, 4) AS 'Dept'
 FROM Person P
 WHERE P.CCC_Position LIKE '__6020%' OR P.CCC_Position LIKE '__6015%'
 ORDER BY Dept, Lastname
