@@ -404,13 +404,14 @@ ORDER BY od.Quantity DESC;
 
 --  Run a report of Dept 6020 and get a list of all their names and Network ID’s
 
-SELECT
-P.Firstname,
-P.Lastname,
-P.CentralAccount,
-SUBSTRING(P.CCC_Position, 3, 4) AS 'Dept'
+SELECT 
+P.Firstname, 
+P.Lastname, 
+P.CentralAccount, 
+P.PersonalTitle AS 'JobTitle', 
+SUBSTRING(P.CCC_Position, 3,4) AS 'Dept' 
 FROM Person P
-WHERE P.CCC_Position LIKE '__6020%' OR P.CCC_Position LIKE '__6015%'
+WHERE (P.CCC_Position LIKE '__6020%' OR P.CCC_Position LIKE '__6015%') and P.IsInActive = '0'
 ORDER BY Dept, Lastname
 
 -- Enjoy
