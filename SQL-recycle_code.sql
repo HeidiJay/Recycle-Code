@@ -183,6 +183,14 @@ FROM customers c
 FULL OUTER JOIN orders o
     ON c.customer_id = o.customer_id;
 
+-- Provide a system-generated report of everyone that has designer access.  
+--  Include parameters/filters used to generate these reports (including date/time, record counts to determine completeness).
+
+Select UserName as Name, 
+	XDateInserted as Created, 
+	IsAdmin as Administator 
+from DialogUser;
+
 -- Join: Group age of oldest athlete by region.
 
 SELECT
