@@ -426,4 +426,27 @@ SELECT
 FROM DialogUser
 WHERE IsInActive = '0';
 
+-- First report.
+
+SELECT 
+	UserName AS Name, 
+	XDateInserted AS Created,
+	XDateUpdated AS Updated, 
+	IsAdmin AS Is_Administator 
+FROM DialogUser;
+
+-- Second report.
+
+SELECT 
+	P.CentralAccount, 
+	D.UserName AS Name, 
+	D.XDateInserted AS Created, 
+	D.XDateUpdated AS Updated, 
+	D.IsAdmin AS Is_Administator
+FROM Person AS P
+RIGHT JOIN DialogUser AS D
+ON P.UID_DialogUser = D.UID_DialogUser
+ORDER BY D.UserName
+ORDER BY UserName;
+
 -- Enjoy
