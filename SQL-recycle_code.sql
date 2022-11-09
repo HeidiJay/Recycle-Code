@@ -419,9 +419,11 @@ ORDER BY Dept, Lastname
 -- Provide a system-generated report of everyone that has designer access.  
 --  Include parameters/filters used to generate these reports (including date/time, record counts to determine completeness).
 
-Select UserName as Name, 
-	XDateInserted as Created, 
-	IsAdmin as Administator 
-from DialogUser;
+SELECT 
+	UserName AS Name, 
+	XDateInserted AS Created, 
+	System_User AS Administator 
+FROM DialogUser
+WHERE IsInActive = '0';
 
 -- Enjoy
